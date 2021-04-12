@@ -13,7 +13,7 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs > rustup-init.sh
 chmod +x rustup-init.sh
 ./rustup-init.sh -y --default-toolchain nightly-2021-04-10 --profile minimal
 rm rustup-init.sh
-export PATH="$BUILD_DIR/.cargo/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"
 
 # Install node
 
