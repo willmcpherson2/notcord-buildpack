@@ -47,4 +47,4 @@ popd
 
 # Build backend
 
-cargo build --release
+cargo build
