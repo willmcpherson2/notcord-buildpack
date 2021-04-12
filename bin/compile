@@ -35,7 +35,7 @@ pushd sqlite-autoconf-3350400
 ./configure
 make
 popd
-export SQLITE3_LIB_DIR="$BUILD_DIR/sqlite-autoconf-3350400"
+export SQLITE3_LIB_DIR="$BUILD_DIR/sqlite-autoconf-3350400/.libs"
 export SQLITE3_INCLUDE_DIR="$BUILD_DIR/sqlite-autoconf-3350400"
 
 # Build frontend
