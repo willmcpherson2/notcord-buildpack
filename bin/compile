@@ -29,10 +29,13 @@ export PATH="$BUILD_DIR/yarn-v1.23.0-20210103.1434/bin:$PATH"
 
 # Install sqlite3
 
-mkdir sqlite
-wget -O sqlite/sqlite3 https://github.com/boramalper/sqlite3-x64/releases/download/3240000--2018-08-05T15.32.14Z/sqlite3
-chmod +x sqlite/sqlite3
-export PATH="$BUILD_DIR/sqlite:$PATH"
+wget https://sqlite.org/2021/sqlite-autoconf-3350400.tar.gz
+tar zxvf sqlite-autoconf-3350400.tar.gz
+pushd sqlite-autoconf-3350400
+./configure
+make
+popd
+export SQLITE3_LIB_DIR="$BUILD_DIR/sqlite-autoconf-3350400"
 
 # Build frontend
 
